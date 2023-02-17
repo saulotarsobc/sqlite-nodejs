@@ -1,7 +1,7 @@
-import { BibleCitation, Document } from "./models";
+import { BibleCitation } from "./models";
 
-Document.count({})
-    .then((data) => {
+BibleCitation.count({})
+    .then((data: any) => {
         console.log(data);
     })
     .catch((e: Error) => {
