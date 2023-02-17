@@ -1,1 +1,1 @@
-console.log(123);
+import { db } from "./database";
