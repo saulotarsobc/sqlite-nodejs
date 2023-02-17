@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Document = exports.BibleCitation = void 0;
-const database_1 = require("../../database");
+const database_1 = require("../database");
 const sequelize_1 = require("sequelize");
 exports.BibleCitation = database_1.db.define("BibleCitation", {
     BibleCitationId: {

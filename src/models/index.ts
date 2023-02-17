@@ -1,4 +1,4 @@
-import { db } from '../../database';
+import { db } from '../database';
 import { DataTypes } from 'sequelize';
 
 export const BibleCitation = db.define("BibleCitation", {
