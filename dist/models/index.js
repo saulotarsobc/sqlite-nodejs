@@ -15,3 +15,4 @@ exports.Document = database_1.db.define("Document", {
         allowNull: false
     }
 });
+//# sourceMappingURL=index.js.map
