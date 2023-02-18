@@ -8,8 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = require("./database");
+const fs_1 = __importDefault(require("fs"));
 const getFile = () => __awaiter(void 0, void 0, void 0, function* () {
     const sql = "SELECT * FROM Document;";
     yield database_1.db.all(sql, [], (err, data) => __awaiter(void 0, void 0, void 0, function* () {
@@ -18,14 +22,9 @@ const getFile = () => __awaiter(void 0, void 0, void 0, function* () {
             return;
         }
         ;
-        // console.log(data, '\n----\n');
-        const Content = data[0].Content;
-        // console.log(blob, '\n');
-        // const buf = new Buffer(blob, 'binary');
-        // console.log(buf, '\n');
-        // fs.writeFileSync('result.bin', buf);
-        let myBlob = new Blob(Content);
-        console.log(myBlob);
+        let aaa = data[0].Content;
+        fs_1.default.writeFileSync('dados.jwtkn', aaa);
+        console.log(aaa, "\n----\n");
     }));
 });
 getFile();
